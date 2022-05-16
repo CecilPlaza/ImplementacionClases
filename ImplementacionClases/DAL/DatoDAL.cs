@@ -13,25 +13,32 @@ namespace ImplementacionClases.DAL
 
         public bool Insertar(DatoDTO datos)
         {
-            return DatoDTO.Add(datos);
+            try
+            {
+                listaDatos.Add(datos);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool Actualizar(DatoDTO datos)
         {
-            return false; //NO OLVIDAR
+            return false; // NO OLVIDAR
         }
 
         public bool Eliminar(DatoDTO datos)
         {
-            return false; //NO OLVIDAR
+            return false; // NO OLVIDAR
         }
 
         public List<DatoDTO> Listar()
         {
-            //return null;
-            return this.listaDatos; 
+            // return null;
+            return listaDatos;
         }
+
     }
-
-
 }

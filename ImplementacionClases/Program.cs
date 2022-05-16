@@ -1,122 +1,94 @@
 ﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
+// Console.WriteLine("Hello, World!");
 using ImplementacionClases.Utils;
 
-// Ejemplo de Clase estatica:
-// Console.WriteLine(ConsoleUtils.Saludar("Cecil"));
+// Ejemplo de Clase estática:
+// Console.WriteLine(ConsoleUtils.Saludar("Enrique"));
 
-//Ejemplo de escritura por linea y por parte
-//Console.Write("Hola");
-//Console.WriteLine(" Mundo");
+/* 
+ * Ejemplo de escritura por línea y por palabra(s)
+ * Console.Write("Hola");
+Console.Write(" Mundo"); */
 
-/* Ejemplo de cambios de colores en consola
+/* Ejemplo de cambios de colores en consola 
 Console.BackgroundColor = ConsoleColor.DarkGray;
 Console.ForegroundColor = ConsoleColor.Green;
-*/
+ */
 
-/*Ejemplo Entrada / salida de consola
+/* Ejemplo Entrada / salida consola 
 Console.Write("Escribe un nombre: ");
 string nombre = Console.ReadLine();
-Console.WriteLine($"Ha escrito {nombre}");
-*/
+Console.WriteLine($"Ha escrito {nombre}"); */
 
-while (Menu()) 
+while (Menu())
 {
-    Console.ReadLine(); //Pausa, solicitar entradas de una tecla
+    Console.ReadKey(); // pausa, solicitar la entrada de una tecla
 }
 
-static bool Menu() 
+static bool Menu()
 {
-    Boolean continuar = true;
+    bool continuar = true;
 
-    Console.Clear();   //Limpia la pantalla 
-    Console.Title = "Ejercicio Menu + Clases";
+    Console.Clear(); // Limpia la pantalla
+    Console.Title = "Ejercicio Menú + Clases";
 
-    Console.WriteLine(" ================");
-    Console.WriteLine("=Menu de opciones=");
-    Console.WriteLine(" ================");
+    Console.WriteLine("Menú de opciones");
+    Console.WriteLine("================");
     Console.WriteLine("1) Listar datos");
     Console.WriteLine("2) Agregar datos");
     Console.WriteLine("");
-    Console.WriteLine("0) Salir ");
+    Console.WriteLine("0) Salir");
 
-    String opcion = Console.ReadLine().Trim();//" 1 " => "1!
+    string opcion = Console.ReadLine().Trim(); // " 1 " => "1"
 
     switch (opcion)
     {
         case "1":
-            Console.WriteLine("Escogio la opcion 1");
+            Console.WriteLine("Escogió la opción 1");
             break;
         case "2":
-            Console.WriteLine("Escogio la opcion 2");
+            Console.WriteLine("Escogió la opción 2");
             OpcionInsertar();
             break;
         case "0":
-            Console.WriteLine("Saliendo del progerama......");
+            Console.WriteLine("Saliendo del programa ...");
             continuar = false;
-            break ;
+            break;
         default:
-            Console.WriteLine("Opcion no valida");
+            Console.WriteLine("Opción no válida");
             break;
     }
-
+    
     return continuar;
 }
 
 static void OpcionInsertar()
 {
     /*
-     int id
-     float nivel
-     float temperatura
-     float voltaje
-    */
-    try
-    {
-        Console.WriteLine("Ingrese el id");
-        int id = Convert.ToInt32(Console.ReadLine());
+     *  int id
+        float flujo
+        float nivel
+        float temperatura
+        float voltaje
+     */
+    Console.WriteLine("bla bla");
+    string respuesta = Console.ReadLine();
 
-        Console.WriteLine("Ingrese temperatura");
-        float temperatura = float.Parse(Console.ReadLine());
-
-        Console.WriteLine("Ingrese valor del flujo");
-        float flujo = float.Parse(Console.ReadLine());
-
-        Console.WriteLine("Ingrese valor del nivel ");
-        float nivel = float.Parse(Console.ReadLine());
-
-        Console.WriteLine("Ingrese valor del voltaje ");
-        float voltaje = float.Parse(Console.ReadLine());
-    }
-    catch (Exception)
-    {
-        Console.WriteLine("Ingrese correctamente los datos e intente otra vez");
-        
-    }
-
-
-
-
-    /*
-    //Ejemplos de Conversion
+    // EJEMPLOS DE CONVERSION
+    // 1) Cualquier cosa a string
     int i = 5;
-    i.ToString();//Cualquier cosa a String
-    
-    //Utilizando la clase Convert(Sirve a varios tipos)
+    i.ToString();
+    0xfb00.ToString(); // hexadecimal a string
+
+    // Utilizando la clase Convert (sirve a varios tipos)
     int convertido = Convert.ToInt32("-100");
 
-    //Conversión explicita
+    // Conversión explícita
     int test = 12345;
-    float conDecimales = (float)test;
+    float conDecimales = (float) test;
 
-    //Conversión implicita
+    // Conversión implícita
     int otroTest = 123456;
-    float otroDecimal = otroTest;
-
-    //A través de clases de tipo de dato
-    string unEnteroSinConvertir = "98";
-    */
-
-
-
+    float otroDecimal = otroTest; //123456.0
+   
 }

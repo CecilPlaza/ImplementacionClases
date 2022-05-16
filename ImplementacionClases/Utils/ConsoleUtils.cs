@@ -8,9 +8,9 @@ namespace ImplementacionClases.Utils
 {
     public static class ConsoleUtils
     {
-        public static string Saludar(string nombre) 
+        public static string Saludar(string nombre)
         {
-            return $"hola {nombre}";
-        }  
+            return $"Hola {nombre}";
+        }
     }
 }

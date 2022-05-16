@@ -18,7 +18,8 @@ namespace ImplementacionClases.DTO
 
         public BancoDTO()
         {
-            this.celdas = new CeldaDTO[] {};//Inicacializar un arreglo de objetos vacios del tipo CeldaDTO
+            this.celdas = new CeldaDTO[] {}; 
+            // Inicializar un arreglo de objetos vacíos del tipo CeldaDTO
         }
 
         public BancoDTO(int id, int numero, CeldaDTO[] celdas)

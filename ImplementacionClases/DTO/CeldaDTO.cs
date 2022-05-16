@@ -8,7 +8,7 @@ namespace ImplementacionClases.DTO
 {
     public class CeldaDTO
     {
-        private int id; 
+        private int id;
         private int numero;
 
         public int Id { get => id; set => id = value; }
